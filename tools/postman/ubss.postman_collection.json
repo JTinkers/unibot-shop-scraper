@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "37d40a99-1698-4bed-9f64-39c0f16c2197",
+		"name": "ubss",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5415308"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5566/api/shops",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5566",
+					"path": [
+						"api",
+						"shops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"JTs shop\",\r\n    \"position\": \r\n    {\r\n        \"x\": 13,\r\n        \"y\": 37\r\n    },\r\n    \"owner\": \r\n    {\r\n        \"name\": \"JT5\"\r\n    },\r\n    \"items\": \r\n    [\r\n        {\r\n            \"id\": \"2\",\r\n            \"name\": \"Item2\",\r\n            \"quantity\": 3,\r\n            \"price\": 3,\r\n            \"value\": 2\r\n        },\r\n        {\r\n            \"id\": \"4\",\r\n            \"name\": \"Item4\",\r\n            \"quantity\": 3,\r\n            \"price\": 3,\r\n            \"value\": 2\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5566/api/shops",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5566",
+					"path": [
+						"api",
+						"shops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5566/api/shops?id=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5566",
+					"path": [
+						"api",
+						"shops"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

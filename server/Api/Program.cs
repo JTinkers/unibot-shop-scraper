@@ -13,8 +13,14 @@ public class Program
         builder.Services.AddSignalR();
 
         var app = builder.Build();
+
+        app.UseCors(policy => policy
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+
         app.MapControllers();
-        app.MapHub<ShopEventHub>("/shops");
+        app.MapHub<EventHub>("/events");
         app.Run();
     }
 }

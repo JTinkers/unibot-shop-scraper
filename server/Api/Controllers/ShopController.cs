@@ -12,11 +12,11 @@ public sealed class ShopController : ControllerBase
 {
     private readonly IShopService _service;
 
-    private readonly IHubContext<ShopEventHub, IShopEventHub> _hubContext;
+    private readonly IHubContext<EventHub, IEventHub> _hubContext;
 
     public ShopController(
         IShopService service, 
-        IHubContext<ShopEventHub, IShopEventHub> hubContext)
+        IHubContext<EventHub, IEventHub> hubContext)
     {
         _service = service;
         _hubContext = hubContext;
@@ -29,7 +29,7 @@ public sealed class ShopController : ControllerBase
             .StoreAsync(shop);
 
         await _hubContext.Clients.All
-            .SendShopStoredAsync(shop);
+            .ShopStored(shop);
 
         return Ok();
     }

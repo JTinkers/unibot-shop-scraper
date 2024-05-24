@@ -1,9 +1,13 @@
-﻿namespace Ubss.Application.Models;
+﻿using Ubss.Api.Application.Models;
+
+namespace Ubss.Application.Models;
 
 public sealed class Shop
 {
     public Guid Id { get; set; } 
         = Guid.NewGuid();
+
+    public Position Position { get; set; }
 
     public string Name { get; set; }
 

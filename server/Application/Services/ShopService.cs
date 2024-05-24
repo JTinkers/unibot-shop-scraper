@@ -19,7 +19,7 @@ internal class ShopService : IShopService
             .FirstOrDefault();
 
         if (previous is not null)
-            await DeleteAsync(previous.Id);
+            throw new InvalidOperationException("Duplicate entry exists");
 
         _shops.Add(shop);
     }
