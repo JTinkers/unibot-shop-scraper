@@ -1,4 +1,4 @@
-﻿using Ubss.Application.Models;
+﻿using Ubss.Api.Application.Models;
 
 namespace Ubss.Api.Application.Services;
 

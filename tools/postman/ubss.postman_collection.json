@@ -7,79 +7,204 @@
 	},
 	"item": [
 		{
-			"name": "Get",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5566/api/shops",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5566",
-					"path": [
-						"api",
-						"shops"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Store",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"JTs shop\",\r\n    \"position\": \r\n    {\r\n        \"x\": 13,\r\n        \"y\": 37\r\n    },\r\n    \"owner\": \r\n    {\r\n        \"name\": \"JT5\"\r\n    },\r\n    \"items\": \r\n    [\r\n        {\r\n            \"id\": \"2\",\r\n            \"name\": \"Item2\",\r\n            \"quantity\": 3,\r\n            \"price\": 3,\r\n            \"value\": 2\r\n        },\r\n        {\r\n            \"id\": \"4\",\r\n            \"name\": \"Item4\",\r\n            \"quantity\": 3,\r\n            \"price\": 3,\r\n            \"value\": 2\r\n        }\r\n    ]\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Shops",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5566/api/shops",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5566",
+							"path": [
+								"api",
+								"shops"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:5566/api/shops",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5566",
-					"path": [
-						"api",
-						"shops"
-					]
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"JTs shop\",\r\n    \"position\": \r\n    {\r\n        \"x\": 13,\r\n        \"y\": 37\r\n    },\r\n    \"owner\": \r\n    {\r\n        \"name\": \"JT5\"\r\n    },\r\n    \"items\": \r\n    [\r\n        {\r\n            \"id\": \"2\",\r\n            \"name\": \"Item2\",\r\n            \"quantity\": 3,\r\n            \"price\": 3,\r\n            \"value\": 2,\r\n            \"properties\": \r\n            {\r\n                \"upgrade-level\": \"1\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": \"4\",\r\n            \"name\": \"Item4\",\r\n            \"quantity\": 3,\r\n            \"price\": 3,\r\n            \"value\": 2,\r\n            \"properties\": {}\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5566/api/shops",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5566",
+							"path": [
+								"api",
+								"shops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5566/api/shops/{guid}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5566",
+							"path": [
+								"api",
+								"shops",
+								"{guid}"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Delete",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5566/api/shops?id=",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5566",
-					"path": [
-						"api",
-						"shops"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": ""
+			"name": "Operations",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5566/api/operations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5566",
+							"path": [
+								"api",
+								"operations"
+							]
 						}
-					]
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5566/api/operations/1c89b619-e747-4a9e-b8dc-4d70254e6105",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5566",
+							"path": [
+								"api",
+								"operations",
+								"1c89b619-e747-4a9e-b8dc-4d70254e6105"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"Ping\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5566/api/operations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5566",
+							"path": [
+								"api",
+								"operations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"edf464c9-e49e-43c6-b804-ce87d91aa7be\",\r\n    \"status\": \"InProgress\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5566/api/operations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5566",
+							"path": [
+								"api",
+								"operations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5566/api/operations/9ec84a6b-180b-42de-bb0d-1588e5d78cbb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5566",
+							"path": [
+								"api",
+								"operations",
+								"9ec84a6b-180b-42de-bb0d-1588e5d78cbb"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }

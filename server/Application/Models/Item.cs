@@ -1,4 +1,4 @@
-﻿namespace Ubss.Application.Models;
+﻿namespace Ubss.Api.Application.Models;
 
 public sealed class Item
 {

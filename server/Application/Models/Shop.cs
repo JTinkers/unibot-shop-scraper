@@ -1,13 +1,11 @@
-﻿using Ubss.Api.Application.Models;
-
-namespace Ubss.Application.Models;
+﻿namespace Ubss.Api.Application.Models;
 
 public sealed class Shop
 {
-    public Guid Id { get; set; } 
+    public Guid Id { get; }
         = Guid.NewGuid();
 
-    public DateTime StoredAt { get; set; }
+    public DateTime StoredAt { get; }
         = DateTime.UtcNow;
 
     public Position Position { get; set; }
