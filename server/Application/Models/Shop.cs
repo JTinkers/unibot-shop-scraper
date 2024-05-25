@@ -7,6 +7,9 @@ public sealed class Shop
     public Guid Id { get; set; } 
         = Guid.NewGuid();
 
+    public DateTime StoredAt { get; set; }
+        = DateTime.UtcNow;
+
     public Position Position { get; set; }
 
     public string Name { get; set; }

@@ -11,4 +11,6 @@ public sealed class Item
     public long Price { get; set; }
 
     public long Value { get; set; }
+
+    public Dictionary<string, string> Properties { get; set; }
 }
